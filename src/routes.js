@@ -45,12 +45,11 @@ export default (
     <Route path="/eveMail" component={EveMail}/>
     <Route path="/tv" component={TvWidget}/>
     <Route path="/food" component={FoodWidget}/>
-    <Route path="/giant" component={GiantBombWidget}/>
+    <Route path="/game-reviews" component={GameReviewWidget}/>
     <Route path="/gw2TalentCalc" component={GuildWars2TalentCalc}/>
     <Route path="POESkillPlanner" component={PathOfExileCalc}/>
     <Route path="/fifteen" component={FifteenGame}/>
     <Route path="/settings" component={SettingsWidget}/>
-    <Route path="/reviews" component={GameReviewWidget}/>
     <Route path="/stream" component={StreamWidget}/>
   </Route>
 );

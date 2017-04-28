@@ -50,6 +50,7 @@ const WidgetSelector = ({handleSelect}) => {
           <li onClick={handleSelect.bind(this, 'twitch')}><span className="glyphicon glyphicon-menu-right" id="pointer"></span>Twitch</li>
           <li onClick={handleSelect.bind(this, 'movie')}><span className="glyphicon glyphicon-menu-right" id="pointer"></span>Couch Potato</li>
           <li onClick={handleSelect.bind(this, 'tv')}><span className="glyphicon glyphicon-menu-right" id="pointer"></span>Binge Tv</li>
+          <li onClick={handleSelect.bind(this, 'reviews')}><span className="glyphicon glyphicon-menu-right" id="pointer"></span>Game Reviews</li>
         </ul>
       </div>
     </div>

@@ -42,7 +42,7 @@ class GiantBomb extends Component {
   render(){
 
     return (
-        <div>
+        <div style = {{font: "white"}}>
 
           <form onSubmit = {this.submitGame}>
             <input onChange = {this.handleChange.bind(this)} type = "text" placeholder = "giant"/>
@@ -52,10 +52,6 @@ class GiantBomb extends Component {
           {
 
             this.state.game ? <div dangerouslySetInnerHTML= {{ __html: this.state.game.map((a,b)=> {return a.deck ;})}}></div> : <p> loading </p>
-            // this.state.game ? this.state.game.map(function(a,b){
-            //   return <h6> {a.deck} </h6>
-            // }) : <p> loading </p>
-
 
           }
         </div>
