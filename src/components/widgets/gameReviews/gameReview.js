@@ -10,7 +10,7 @@ class GameReviews extends Component {
       game: null,
       gameInput: ''
     };
-    
+
     this.handleChange = this.handleChange.bind(this);
     this.submitGame = this.submitGame.bind(this);
   }
@@ -21,51 +21,51 @@ class GameReviews extends Component {
   }
 
   submitGame(event){
-  
+
     event.preventDefault();
-  
+
     let mashkey = "9AVDJ0SYqzmshxvVyIP3fvB30uxnp11lb4gjsnK07xVmu02YUd";
-      
+
     ajax({
-            
+
       beforeSend: function(xhrObj) {
         xhrObj.setRequestHeader('X-Mashape-Key',mashkey);
       },
 
       type: "GET",
       url: 'https://ahmedakhan-game-review-information-v1.p.mashape.com/api/v1/information?game_name=' + this.state.gameInput
-          
-            
+
+
     })
     .done((data)=>{
       this.setState({game:data.result});
-         
+
     });
   }
 
 
-  
-  
+
+
   render(){
 
     return (
         <div>
-         
+
           <form onSubmit = {this.submitGame}>
             <input onChange = {this.handleChange.bind(this)} type = "text" placeholder = "giant"/>
             <input type = "submit"/>
           </form>
 
           {
-          
-            this.state.game ? <div> <li> <a href = {this.state.game.metacritic.url} target = "blank"> <h3> {this.state.game.name}</h3> <img style ={{width: 250}} src = {this.state.game.thumbnail} /> </a> <h5> {this.state.game.summary} </h5></li> </div> : <p> CHOOSE A GAME...AND THEN YOU WILL JOIN ME....CHOOSE THE TV....THEN YOU WILL JOIN YOUR MOTHER! </p>
+
+            this.state.game ? <div style = {{color: "white"}}> <li> <a href = {this.state.game.metacritic.url} target = "blank"> <h3> {this.state.game.name}</h3> <img style ={{width: 250}} src = {this.state.game.thumbnail} /> </a> <h5> {this.state.game.summary} </h5></li> </div> : <center> <p style = {{color: "white"}}> CHOOSE A GAME...AND THEN YOU WILL JOIN ME....CHOOSE THE TV....THEN YOU WILL JOIN YOUR MOTHER! </p> </center>
 
           }
 
         </div>
 
-      );  
-    
+      );
+
   }
 }
 

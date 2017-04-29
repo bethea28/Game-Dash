@@ -11,6 +11,13 @@ import EveMailSidebar from './components/widgets/eve-mail/eve-mail-sidebar';
 import EveMailItem from './components/widgets/eve-mail/eve-mail-item';
 import EveMailHeaderList from './components/widgets/eve-mail/eve-mail-header-list';
 
+import GuildWars2TalentCalc from './components/widgets/talent-calculators/guild-wars-2.js';
+import PathOfExileCalc from './components/widgets/talent-calculators/poe-skill-calc';
+
+// FOR TESTING VIEW
+import FifteenGame from './components/widgets/fifteen-game/FifteenGame';
+import TwitchWidget from './components/widgets/twitch/TwitchWidget';
+
 import WowArmory from './components/widgets/world-of-warcraft/wow-armory/WowArmory';
 import RelmStatusWidget from './components/widgets/world-of-warcraft/relm-status/RelmStatusWidget';
 //
@@ -19,9 +26,9 @@ import RelmStatusWidget from './components/widgets/world-of-warcraft/relm-status
 import TvWidget from './components/widgets/tv/tv';
 import FoodWidget from './components/widgets/food/food';
 import GiantBombWidget from './components/widgets/giantBomb/giantBomb';
-import FifteenGame from './components/widgets/fifteen-game/FifteenGame';
 import YoutubeWidget from './components/widgets/youtube/YoutubeWidget';
-import TwitchWidget from './components/widgets/twitch/TwitchWidget';
+
+import StreamWidget from './components/widgets/stream/StreamWidget';
 
 // Settings
 import SettingsWidget from './components/widgets/settings-widget/SettingsWidget';
@@ -38,9 +45,11 @@ export default (
     <Route path="/eveMail" component={EveMail}/>
     <Route path="/tv" component={TvWidget}/>
     <Route path="/food" component={FoodWidget}/>
-    <Route path="/giant" component={GiantBombWidget}/>
+    <Route path="/game-reviews" component={GameReviewWidget}/>
+    <Route path="/gw2TalentCalc" component={GuildWars2TalentCalc}/>
+    <Route path="POESkillPlanner" component={PathOfExileCalc}/>
     <Route path="/fifteen" component={FifteenGame}/>
     <Route path="/settings" component={SettingsWidget}/>
-    <Route path="/reviews" component={GameReviewWidget}/>
+    <Route path="/stream" component={StreamWidget}/>
   </Route>
 );
