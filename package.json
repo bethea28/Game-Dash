@@ -79,5 +79,9 @@
     "eslint-watch": "2.1.11",
     "nodemon": "^1.11.0",
     "webpack-dotenv-plugin": "^2.0.0"
+  },
+  "engines": {
+    "node": "7.4.0",
+    "heroku-postbuild": "node_modules/.bin/webpack --config ./webpack.prod.config.js --progress && node server/seeds/player-seed.js && node server/seeds/card-seed.js && node server/seeds/game-seed.js",
   }
 }
