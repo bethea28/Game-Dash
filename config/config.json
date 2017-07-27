@@ -1,14 +1,21 @@
+
+
 {
   "development": {
-    "url": "postgres://postgres:postgres@localhost:5432/gamedash",
+    "username": "bryanbethea",
+    "password": "2d?e>oy:6,I1",
+    "database": "gamedash",
+    "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "url": "postgres://postgres:postgres@localhost:5432/gamedash",
+    "username": "bryanbethea",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "url": "postgres://postgres:postgres@localhost:5432/gamedash",
-    "dialect": "postgres"
+    "use_env_variable": "DATABASE_URL"
   }
 }
