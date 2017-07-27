@@ -4,7 +4,8 @@
   "description": "A dashboard for games",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all --parallel nmon wpack lint:watch",
+    "heroku-postbuild": "node_modules/.bin/webpack --config ./webpack.config.js --progress",
+    "start": "node_modules/.bin/nodemon start.js & node_modules/.bin/webpack  --watch --config ./webpack.config.js",
     "startwin": "concurrently --kill-others \"webpack --watch\" \"nodemon ./server.js\"",
     "lint": "node_modules/.bin/esw webpack.config.js ./src",
     "lint:watch": "npm run lint -- --watch",
@@ -81,7 +82,8 @@
     "webpack-dotenv-plugin": "^2.0.0"
   },
   "engines": {
-    "node": "7.4.0",
-    "heroku-postbuild": "node_modules/.bin/webpack --config ./webpack.prod.config.js --progress && node server/seeds/player-seed.js && node server/seeds/card-seed.js && node server/seeds/game-seed.js",
-  }
+    "node": "7.4.0"
+  //   "heroku-postbuild": "node_modules/.bin/webpack --config ./webpack.prod.config.js --progress && node server/seeds/player-seed.js && node server/seeds/card-seed.js && node server/seeds/game-seed.js"
+  // }
 }
+

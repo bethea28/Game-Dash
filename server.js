@@ -18,4 +18,5 @@ app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
-app.listen(process.env.PORT || '8000', () => console.log('Listening on port 9999'));
+
+module.exports = app
